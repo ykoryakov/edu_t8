@@ -16,13 +16,13 @@ https://www.anaconda.com/download/#windows (выбираем версию Python
 
 ### Вариант 1
 
-$ sudo apt-get install python-virtualenv
-$ mkdir ~/env && cd ~/env
-$ virtualenv --python=python3 edu
-$ source edu/bin/activate
-$ pip install numpy
-$ pip install scipy
-$ pip install jupyter
+$ sudo apt-get install python-virtualenv  
+$ mkdir ~/env && cd ~/env  
+$ virtualenv --python=python3 edu  
+$ source edu/bin/activate  
+$ pip install numpy  
+$ pip install scipy  
+$ pip install jupyter  
 
 ### Вариант 2
 
