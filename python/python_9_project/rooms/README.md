@@ -26,13 +26,13 @@ pip install django
 cd ~
 mkdir pro
 cd pro
-git clone ...
+git clone https://github.com/ykoryakov/edu_t8.git
+cd ~/pro/edu_t8/python/python_9_project/rooms/
 ```
 
 ## Подготовка БД
 
 ```bash
-cd ...
 ./manage.py check
 ./manage.py makemigrations room
 ./manage.py migrate
