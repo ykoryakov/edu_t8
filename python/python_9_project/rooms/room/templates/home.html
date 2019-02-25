@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <h1>Переговорки</h1>
+
+  {% if rooms %}
+
+      {% for room in rooms %}
+
+        <h2>{{ room.number }}, {{ room.name }}</h2>
+
+        <a href="{% url 'room:reserve' room.id %}">Забронировать</a>
+
+        {% with room.reserve_set.all as reserves %}
+
+          <table>
+            {% for reserve in reserves %}
+              <tr>
+                <td>{{ reserve.reserve_date }}</td>
+                <td>{{ reserve.reserve_time }}</td>
+                <td>{{ reserve.duration }}</td>
+                <td>{{ reserve.name }}</td>
+              </tr>
+            {% endfor %}
+          </table>
+
+        {% endwith %}
+
+      {% endfor %}
+
+  {% else %}
+    <p>Переговорные комнаты не добавлены.</p>
+  {% endif %}
+
+{% endblock %}
