@@ -4,7 +4,7 @@ COPY . /app
 
 WORKDIR /app
 
-RUN pip install --upgrade pip==19.2.3 \
+RUN pip install --upgrade pip \
     && pip3 install -r requirements.txt
 
 ENTRYPOINT ["python", "./app.py"]
